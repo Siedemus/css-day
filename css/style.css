@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+:root {
+  --main: #ff7b54;
+  --contrast: #ffffff;
+
+  --font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--main);
+  color: var(--contrast);
+  font-weight: bold;
+  font-family: var(--font-family);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
