@@ -1,1 +1,90 @@
 @import url(style.css);
+
+.main__header {
+  font-size: 128px;
+  font-weight: bold;
+}
+
+.main__sub-header {
+  font-size: 40px;
+}
+
+.main__button {
+  font-size: 32px;
+  padding: 0 64px;
+  height: 100px;
+  border: 4px solid var(--contrast);
+  background-color: var(--contrast);
+  color: var(--main);
+  cursor: pointer;
+  transition: outline 0.2s linear;
+}
+
+.main__button:hover,
+.main__button:focus {
+  outline: 2px solid var(--contrast);
+}
+
+.main__button:not(.main__button:last-of-type) {
+  margin-inline-end: 20px;
+}
+
+.main__button--reversed {
+  background-color: var(--main);
+  color: var(--contrast);
+}
+
+.main__container {
+  display: flex;
+  margin-top: 100px;
+}
+
+.button__icon {
+  vertical-align: middle;
+}
+
+@media (max-width: 1220px) {
+  .main__header {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 690px) {
+  .main__header {
+    font-size: 40px;
+  }
+
+  .main__sub-header {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main__button {
+    font-size: 24px;
+    padding: 0 32px;
+    height: 70px;
+  }
+
+  .main__container {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 781px) {
+  .main__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button__icon {
+    width: 20px;
+  }
+
+  .main__button {
+    margin-block-end: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

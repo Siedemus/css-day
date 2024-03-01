@@ -11,18 +11,168 @@ html {
 :root {
   --main: #ff7b54;
   --contrast: #ffffff;
+  --secondary: #000000;
 
   --font-family: "Inter", sans-serif;
 }
 
 body {
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+.body--primary {
   background-color: var(--main);
   color: var(--contrast);
-  font-weight: bold;
-  font-family: var(--font-family);
+}
+
+.body--secondary {
+  background-color: var(--contrast);
+  color: var(--main);
+}
+
+p {
+  margin: 0;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.header__link {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav {
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list-item {
+  margin-inline-end: 36px;
+  font-size: 20px;
+}
+
+.main {
+  padding: 150px;
+}
+
+@media (max-width: 915px) {
+  .main {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 424px) {
+  .main {
+    padding: 40px;
+  }
+}
+
+.menu {
+  display: none;
+}
+
+.closed {
+  display: none;
+}
+
+@media (max-width: 840px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .header__buttons {
+    justify-self: flex-end;
+  }
+
+  .menu {
+    display: block;
+    cursor: pointer;
+    width: 33px;
+    overflow-y: hidden;
+  }
+
+  .menu--active {
+    display: none;
+  }
+
+  .closed--active {
+    display: block;
+    cursor: pointer;
+    justify-self: flex-end;
+    width: 33px;
+    overflow-y: hidden;
+  }
+
+  .nav {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: var(--main);
+    top: 110px;
+    left: -150%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--contrast);
+  }
+
+  .body--secondary .nav {
+    background-color: var(--contrast);
+    border-bottom: 5px solid var(--main);
+  }
+
+  .nav--visible {
+    left: 0;
+  }
+
+  .main--blur {
+    filter: blur(5px);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .nav__list-item {
+    font-size: 40px;
+    margin: 0;
+    font-weight: bold;
+    align-self: center;
+  }
+
+  .header__link {
+    justify-self: center;
+    order: -1;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav {
+    padding: 15px;
+  }
 }

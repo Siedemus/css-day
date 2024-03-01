@@ -11,29 +11,48 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="js/script.js"></script>
     <title>CSS Day</title>
   </head>
-  <body class="mainBackground">
-    <header>
-      <a href="/">CSS Day</a>
-      <div>
-        <nav>
-          <ul>
-            <li><a class="mainList__link" href="#">About</a></li>
-            <li><a class="mainList__link" href="speakers.html">Speakers</a></li>
-            <li><a class="mainList__link" href="#">Contact</a></li>
+  <body class="body--primary">
+    <header class="header">
+      <div class="header__buttons js-buttons">
+        <img src="./images/menu.svg" alt="menu button" class="menu js-menu"/>
+        <img src="./images/close-menu.svg" alt="menu button" class="closed js-closed"/>
+      </div>
+      <a class="header__link" href="/">CSS Day</a>
+      <div class="header__container">
+        <nav class="nav js-nav">
+          <ul class="nav__list">
+            <li class="nav__list-item"><a href="#">About</a></li>
+            <li class="nav__list-item">
+              <a href="speakers.html">Speakers</a>
+            </li>
+            <li class="nav__list-item"><a href="#">Contact</a></li>
+            <li>
+              <img class="shopping-cart shopping-cart-icon--primary" src="./images/shopping-cart.svg" alt="Shopping cart" />
+            </li>
           </ul>
         </nav>
-        <img src="./images/shopping-cart.svg" alt="Shopping cart" />
       </div>
     </header>
-    <main>
-      <p>CSS Day is a conference for developers who love beautiful websites.</p>
-      <p>4-8 June 2023</p>
-      <button>
-        Buy Tickets <img src="./images/arrow-right.svg" alt="Right arrow" />
-      </button>
+    <main class="main js-main">
+      <p class="main__header">
+        CSS Day is a conference for developers who love beautiful websites.
+      </p>
+      <p class="main__sub-header">4-8 June 2023</p>
+      <div class="main__container">
+        <button class="main__button">
+          Buy Tickets
+          <img
+            class="button__icon"
+            src="./images/arrow-right.svg"
+            alt="Right arrow"
+          />
+        </button>
+        <button class="main__button main__button--reversed">Contact Us</button>
+      </div>
     </main>
   </body>
 </html>
