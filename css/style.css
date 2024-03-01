@@ -89,6 +89,10 @@ a {
   }
 }
 
+.header__buttons {
+  display: none;
+}
+
 .menu {
   display: none;
 }
@@ -100,6 +104,14 @@ a {
 @media (max-width: 840px) {
   .header {
     padding: 0 20px;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .header__buttons {
+    display: block;
   }
 
   .header__buttons {
